@@ -1,0 +1,23 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/style.css -o public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexburnitdown/tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexburnitdown/tailwind/issues"
+  },
+  "homepage": "https://github.com/alexburnitdown/tailwind#readme",
+  "dependencies": {
+    "tailwindcss": "^1.8.3"
+  }
+}
