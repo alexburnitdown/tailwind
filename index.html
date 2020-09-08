@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+      <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="public/style.css">
 </head>
 <body class="text-grey-600 font-body">
-    <div class="">
-    <div class="">
-        <nav>
-            <div class="">
+    <div class="grid md:grid-cols-3">
+    <div class="md:col-span-1 md:flex md:justify-end">
+        <nav class="text-right">
+            <div class="flex justify-between items-center">
                 <h1 class="font-bold uppercase p-4 border-b border-gray-100 text-mammoth">
-                    <a href="#" class="text-green-500 sm:text-red-500 lg:text-blue-500">Food Ninja</a>
+                    <a href="#" class="text-green-500 sm:text-red-500 lg:text-blue-500 hover:text-gray-700">Food Ninja</a>
                 </h1>
+                <div class="px-4 cursor-pointer md:hidden" id="burger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
-            <ul>
-                <li class="text-grey-700 font-bold">
-                    <a href="#">
+            <ul class="text-sm mt-6 hidden md:block" id="menu">
+                <li class="text-grey-700 font-bold py-1">
+                    <a href="#" class="px-4 flex justify-end border-r-4 border-primary">
+                        <i class="fas fa-home ml-2"></i>
                         <span class="font-bold">Home</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="py-1">
+                    <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                        <i class="far fa-question-circle ml-2"></i>
                         <span>About</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="py-1">
+                    <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                        <i class="far fa-envelope ml-2"></i>
                         <span>Contact</span>
                     </a>
                 </li>
@@ -35,10 +43,10 @@
         </nav>
     </div>      
     <!-- end nav -->
-    <main class="px-16 py-6 bg-gray-200">
+    <main class="px-16 py-6 bg-gray-200 md:col-span-2">
         <div class="flex justify-center md:justify-end">
-            <a href="#" class="text-primary">Log in</a>
-            <a href="#" class="text-primary ml-2">Sign up</a>
+            <a href="#" class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Log in</a>
+            <a href="#" class="btn text-primary ml-2 border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Sign up</a>
         </div>
         <!-- <div class="flex items-center justify-center">
             <div class="bg-red-500 h-4 w-6"></div>
@@ -51,35 +59,44 @@
         </header>
         <div class="">
             <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest recipes</h4>
-            <div class="mt-8">
+            <div class="mt-8 grid lg:grid-cols-3 gap-10">
                 <!-- cards go here -->
-                <div class="card">
+                <div class="card hover:shadow-xl">
                     <img src="img/food-1.jpg" alt="" class="w-full h-32 sm:h-48 object-cover">
                     <div class="m-4">
                         <span class="font-bold">5 bean chili stew</span>
                         <span class="block text-gray-500 text-sm">recipe by mario</span>
                     </div>
                     <div class="badge">
+                          <svg class="w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
                         <span>25 mins</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card hover:shadow-xl">
                     <img src="img/food-2.jpg" alt="food-2" class="w-full h-32 sm:h-48 object-cover">
                     <div class="m-4">
                         <span class="font-bold">Some food secondary</span>
                         <span class="block text-gray-500 text-sm">recipe by mario</span>
                     </div>
                     <div class="badge">
+                        <svg class="w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
                         <span>25 mins</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card hover:shadow-xl">
                     <img src="img/food-3.jpg" alt="food-3" class="w-full h-32 sm:h-48 object-cover">
                     <div class="m-4">
                         <span class="font-bold">Nice dish</span>
                         <span class="block text-gray-500 text-sm">recipe by mario</span>
                     </div>
                     <div class="badge">
+                        <svg class="w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
                         <span>25 mins</span>
                     </div>
                 </div>
@@ -89,11 +106,11 @@
                 <!-- cards go here -->
             </div>
             <div class="flex justify-center">
-                <div class="bg-secondary-100 text-secondary-200">Load more</div>
+                <div class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner hover:text-white transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Load more</div>
             </div>
         </div>
     </main>
 </div>
-    
+    <script src="code.js"></script>
 </body>
 </html>
