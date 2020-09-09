@@ -21695,6 +21695,10 @@ video {
   letter-spacing: 0.05em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
